@@ -5,6 +5,8 @@ import 'package:preparation_get_x/profile_screen.dart';
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});
 
+  static const String name = '/settings';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +31,8 @@ class SettingScreen extends StatelessWidget {
                 //   MaterialPageRoute(
                 //       builder: (context) => const ProfileScreen()),
                 // );
-                Get.off(()=> const ProfileScreen());
+                //Get.off(()=> const ProfileScreen());
+                Get.offNamed(ProfileScreen.name );
               },
               child: const Text('Profile'),
             )

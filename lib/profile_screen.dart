@@ -5,6 +5,8 @@ import 'package:preparation_get_x/home_screen.dart';
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
+  static const String name = '/profile';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,10 +35,11 @@ class ProfileScreen extends StatelessWidget {
                 //     ),
                 //     (e) => false);
 
-                Get.offAll(
-                  () => const HomeScreen(),
-                  transition: Transition.leftToRight,
-                );
+                // Get.offAll(
+                //   () => const HomeScreen(),
+                //   transition: Transition.leftToRight,
+                // );
+                Get.offAllNamed(HomeScreen.name);
               },
               child: const Text('Home'),
             ),

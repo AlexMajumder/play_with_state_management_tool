@@ -6,6 +6,8 @@ import 'counter_controller.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  static const String name = '/';
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -42,7 +44,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 //     MaterialPageRoute(
                 //       builder: (context) => const SettingScreen(),
                 //     ));
-                Get.to(() => const SettingScreen());
+                //Get.to(() => const SettingScreen());
+                //Navigator.pushNamed(context, SettingScreen.name);
+                Get.toNamed(SettingScreen.name);
               },
               style: ElevatedButton.styleFrom(
                   padding:
@@ -50,7 +54,20 @@ class _HomeScreenState extends State<HomeScreen> {
               child: const Text(
                 'Setting',
               ),
-            )
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Get.showSnackbar(const GetSnackBar(
+                    title: 'Title of snackBar',
+                    message: 'Message of the snackBar',
+                    duration: Duration(seconds: 3),
+                    snackPosition: SnackPosition.TOP,
+                  ));
+                },
+                child: const Text('Show snackBar'))
           ],
         );
       })),
