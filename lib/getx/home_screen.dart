@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:preparation_get_x/setting_screen.dart';
+import 'package:preparation_get_x/getx/setting_screen.dart';
 import 'counter_controller.dart';
 
 class HomeScreen extends StatefulWidget {
