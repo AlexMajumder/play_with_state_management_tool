@@ -130,6 +130,4 @@ class SettingScreen extends StatelessWidget {
   }
 }
 
-class counterStateHolder extends InheritedWidget{
-  37
-}
+
